@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cajita Misteriosa: Alicia en el País de las Maravillas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Cajita Misteriosa: Alicia en el País de las Maravillas</h1>
+   
+  </header>
+<a href="index.html" class="btn-volver">Volver</a>
+
+  <main class="detalle-cajita">
+    <section class="imagenes">
+      <div class="imagen-grande">
+        <img src="imagenes P/Boîte surprise Alice.jfif" alt="Alicia vista principal">
+      </div>
+      <div class="imagenes-pequenas">
+        <img src="imagenes P/alice 2.jfif" alt="Alicia detalle 1">
+        <img src="imagenes P/alice3.jpg" alt="Alicia detalle 2">
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>Detalles del producto</h2>
+      <p>Una cajita misteriosa inspirada en el mundo fantástico de Alicia en el País de las Maravillas. Podría contener una figura sorpresa de Alicia, el Conejo Blanco, el Sombrerero Loco o incluso la Reina de Corazones.</p>
+
+      <h2>Información de envío</h2>
+      <p>Envío nacional disponible. Tiempo estimado: 3–5 días hábiles. Empaque seguro y seguimiento incluido.</p>
+    </section>
+
+    <section class="formulario-envio">
+      <h2>Formulario de envío</h2>
+      <form id="formCompra">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <button type="submit">Finalizar compra</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Cajitas Misteriosas</p>
+  </footer>
+
+  <script>
+    document.getElementById("formCompra").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const nombre = document.getElementById("nombre").value;
+      const direccion = document.getElementById("direccion").value;
+
+      alert("🎩 Gracias por tu compra, " + nombre + "! \n\nTu cajita misteriosa será enviada a: " + direccion +
+            "\n\nRecuerda... en el País de las Maravillas, la sorpresa puede ser tan inesperada como el Sombrerero Loco 🐇✨");
+    });
+  </script>
+</body>
+</html>
+<link rel="stylesheet" href="stylespochaco.css">

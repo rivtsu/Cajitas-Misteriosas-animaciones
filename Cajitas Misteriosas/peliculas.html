@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colección Películas</title>
+
+  <!-- CSS general -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- CSS de categorías (el mismo que Sanrio) -->
+  <link rel="stylesheet" href="stylessanrio.css">
+</head>
+
+<body>
+
+  <!-- Header con menú -->
+  <header class="header">
+    <h1>Colección Películas</h1>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+
+        <li class="dropdown">
+          <button class="dropbtn">
+            Colecciones
+            <span class="arrow">▼</span>
+          </button>
+
+          <ul class="dropdown-content">
+            <li>
+              <a href="sanrio.html">
+                <img src="menu/Sanrio.jfif" alt="Sanrio">
+                Sanrio
+              </a>
+            </li>
+
+            <li>
+              <a href="seriesanimadas.html">
+                <img src="menu/Series Animadas.jfif" alt="Series Animadas">
+                Series Animadas
+              </a>
+            </li>
+
+            <li>
+              <a href="peliculas.html">
+                <img src="menu/Peliculas.jfif" alt="Películas">
+                Películas
+              </a>
+            </li>
+
+            <li>
+              <a href="disney.html">
+                <img src="menu/Disney.jpg" alt="Disney">
+                Disney
+              </a>
+            </li>
+
+            <li>
+              <a href="anime.html">
+                <img src="menu/Anime.jfif" alt="Anime">
+                Anime
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Galería estilo Pop Mart -->
+  <main class="galeria-popmart">
+
+    <!-- Tarjeta Harry Potter -->
+    <div class="card-popmart" onclick="location.href='harrypotter.html'">
+
+      <div class="img-container">
+        <!-- Imagen principal -->
+        <img src="imagenes P/Harry Potter and the Prisoner of Azkaban Series Figures-POP MART(United States).jfif"
+             alt="Harry Potter">
+
+        <!-- Imagen hover -->
+        <img class="img-hover"
+             src="categoria/harry.jfif"
+             alt="Harry Potter Hover">
+      </div>
+
+      <h2>Colección Harry Potter</h2>
+      <p>Magia y hechicería en cada cajita sorpresa.</p>
+      <p style="font-weight:bold; color:#b00020;">$25</p>
+
+    </div>
+
+    <!-- Espacios vacíos para simular más productos -->
+    <div></div>
+    <div></div>
+
+  </main>
+
+  <!-- Script del menú -->
+  <script>
+    const dropdown = document.querySelector('.dropdown');
+    const dropbtn = document.querySelector('.dropbtn');
+
+    dropbtn.addEventListener('click', () => {
+      dropdown.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

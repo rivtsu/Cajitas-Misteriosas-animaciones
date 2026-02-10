@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cajita Misteriosa: Pochaco</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="stylespochaco.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Cajita Misteriosa: Pochaco</h1>
+  </header>
+
+  <a href="index.html" class="btn-volver">Volver</a>
+
+  <main class="detalle-cajita">
+    <section class="imagenes">
+      <div class="imagen-grande">
+        <img src="imagenes P/Cute Sanrio Cartoon Doll Pachacco School Fun Series Blind Box Pvc Anime Cute Handmade Toy Festival Surprise Gift Home Decoration, All 6 boxes (1).jfif"
+             alt="Pochaco vista principal"
+             width="400" height="300"
+             loading="lazy">
+      </div>
+      <div class="imagenes-pequenas">
+        <img src="imagenes P/pochaco 2.jfif" alt="Pochaco detalle 1" width="200" height="150" loading="lazy">
+        <img src="imagenes P/pochaco 3.jfif" alt="Pochaco detalle 2" width="200" height="150" loading="lazy">
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>Detalles del producto</h2>
+      <p>Esta cajita misteriosa incluye una figura sorpresa de Pochaco, con acabados adorables y detalles únicos. Ideal para fans de Sanrio y coleccionistas.</p>
+
+      <h2>Información de envío</h2>
+      <p>Envío nacional disponible. Tiempo estimado: 3–5 días hábiles. Empaque seguro y seguimiento incluido.</p>
+    </section>
+  </main>
+
+  <section class="formulario-envio">
+    <h2>Formulario de envío</h2>
+    <form id="formCompra">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <button type="submit">Finalizar compra</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Cajitas Misteriosas</p>
+  </footer>
+
+  <script>
+    document.getElementById("formCompra").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const nombre = document.getElementById("nombre").value;
+      const direccion = document.getElementById("direccion").value;
+      alert("🎉 ¡Gracias por tu compra, " + nombre + "! \n\nTu cajita misteriosa será enviada a: " + direccion +
+            "\n\nRecuerda: puede que te toque justo la figura que menos esperabas de la colección 😅✨");
+    });
+  </script>
+</body>
+</html>

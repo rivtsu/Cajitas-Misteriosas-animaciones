@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colección Series Animadas</title>
+
+  <!-- CSS general -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- CSS de categorías (el mismo que Sanrio) -->
+  <link rel="stylesheet" href="stylessanrio.css">
+</head>
+
+<body>
+
+  <!-- Header con menú -->
+  <header class="header">
+    <h1>Colección Series Animadas</h1>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+
+        <li class="dropdown">
+          <button class="dropbtn">
+            Colecciones
+            <span class="arrow">▼</span>
+          </button>
+
+          <ul class="dropdown-content">
+            <li>
+              <a href="sanrio.html">
+                <img src="menu/Sanrio.jfif" alt="Sanrio">
+                Sanrio
+              </a>
+            </li>
+
+            <li>
+              <a href="series.html">
+                <img src="menu/Series Animadas.jfif" alt="Series Animadas">
+                Series Animadas
+              </a>
+            </li>
+
+            <li>
+              <a href="peliculas.html">
+                <img src="menu/Peliculas.jfif" alt="Películas">
+                Películas
+              </a>
+            </li>
+
+            <li>
+              <a href="disney.html">
+                <img src="menu/Disney.jpg" alt="Disney">
+                Disney
+              </a>
+            </li>
+
+            <li>
+              <a href="anime.html">
+                <img src="menu/Anime.jfif" alt="Anime">
+                Anime
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Galería estilo Pop Mart -->
+  <main class="galeria-popmart">
+
+    <!-- Tarjeta Chicas Superpoderosas -->
+    <div class="card-popmart" onclick="location.href='chicas.html'">
+
+      <div class="img-container">
+        <!-- Imagen principal -->
+        <img src="imagenes P/chicas super poderosas.jfif"
+             alt="Chicas Superpoderosas">
+
+        <!-- Imagen hover -->
+        <img class="img-hover"
+             src="categoria/chicas super poderosas.jfif"
+             alt="Chicas Hover">
+      </div>
+
+      <h2>Colección Chicas Superpoderosas</h2>
+      <p>Figuras sorpresa de Blossom, Bubbles y Buttercup.</p>
+      <p style="font-weight:bold; color:#b00020;">$20</p>
+
+    </div>
+
+    <!-- Tarjeta El Principito -->
+    <div class="card-popmart" onclick="location.href='principito.html'">
+
+      <div class="img-container">
+        <!-- Imagen principal -->
+        <img src="imagenes P/principito.jfif"
+             alt="El Principito">
+
+        <!-- Imagen hover -->
+        <img class="img-hover"
+             src="categoria/principito.jfif"
+             alt="Principito Hover">
+      </div>
+
+      <h2>Colección El Principito</h2>
+      <p>Una colección inspirada en el clásico literario.</p>
+      <p style="font-weight:bold; color:#b00020;">$25</p>
+
+    </div>
+
+    <!-- Espacio vacío para simular más productos -->
+    <div></div>
+
+  </main>
+
+  <!-- Script del menú -->
+  <script>
+    const dropdown = document.querySelector('.dropdown');
+    const dropbtn = document.querySelector('.dropbtn');
+
+    dropbtn.addEventListener('click', () => {
+      dropdown.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

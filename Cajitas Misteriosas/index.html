@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cajitas Misteriosas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="loader"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Cajitas Misteriosas</h1>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+
+        <!-- Menú desplegable -->
+        <li class="dropdown">
+          <button class="dropbtn">
+            Colecciones
+            <span class="arrow">▼</span>
+          </button>
+
+          <ul class="dropdown-content">
+
+            <li>
+              <a href="sanrio.html">
+                <img src="menu/Sanrio.jfif" alt="Sanrio">
+                Sanrio
+              </a>
+            </li>
+
+            <li>
+              <a href="seriesanimadas.html">
+                <img src="menu/Series Animadas.jfif" alt="Series Animadas">
+                Series Animadas
+              </a>
+            </li>
+
+            <li>
+              <a href="peliculas.html">
+                <img src="menu/Peliculas.jfif" alt="Películas">
+                Películas
+              </a>
+            </li>
+
+            <li>
+              <a href="disney.html">
+                <img src="menu/Disney.jpg" alt="Disney">
+                Disney
+              </a>
+            </li>
+
+            <li>
+              <a href="anime.html">
+                <img src="menu/Anime.jfif" alt="Anime">
+                Anime
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main con galería -->
+  <main class="galeria">
+
+    <div class="card">
+      <img src="imagenes P/Cute Sanrio Cartoon Doll Pachacco School Fun Series Blind Box Pvc Anime Cute Handmade Toy Festival Surprise Gift Home Decoration, All 6 boxes (1).jfif" alt="Cajita Misteriosa Pochaco">
+      <h2>Pochaco</h2>
+      <p>Una cajita misteriosa inspirada en el adorable personaje de Sanrio.</p>
+      <button onclick="location.href='pochaco.html'">Descubrir</button>
+    </div>
+
+    <div class="card">
+      <img src="imagenes P/principito.jfif" alt="Cajita Misteriosa El Principito">
+      <h2>El Principito</h2>
+      <p>La magia del clásico literario en una colección misteriosa.</p>
+      <button onclick="location.href='principito.html'">Descubrir</button>
+    </div>
+
+    <div class="card">
+      <img src="imagenes P/chicas super poderosas.jfif" alt="Cajita Misteriosa Chicas Superpoderosas">
+      <h2>Las Chicas Superpoderosas</h2>
+      <p>Blossom, Bubbles y Buttercup llegan en versión sorpresa.</p>
+      <button onclick="location.href='chicas.html'">Descubrir</button>
+    </div>
+
+    <div class="card">
+      <img src="imagenes P/Pop Mart Jujutsu Kaisen Uniform Series Blind Box Figure In Stock.jfif" alt="Cajita Misteriosa Jujutsu Kaisen">
+      <h2>Jujutsu Kaisen</h2>
+      <p>Personajes del anime con un toque misterioso y coleccionable.</p>
+      <button onclick="location.href='jujutsu.html'">Descubrir</button>
+    </div>
+
+    <div class="card">
+      <img src="imagenes P/Harry Potter and the Prisoner of Azkaban Series Figures-POP MART(United States).jfif" alt="Cajita Misteriosa Harry Potter">
+      <h2>Harry Potter</h2>
+      <p>Magia y hechicería en cada cajita sorpresa del mundo mágico.</p>
+      <button onclick="location.href='harrypotter.html'">Descubrir</button>
+    </div>
+
+    <div class="card">
+      <img src="imagenes P/Boîte surprise Alice.jfif" alt="Cajita Misteriosa Alicia en el País de las Maravillas">
+      <h2>Alicia en el País de las Maravillas</h2>
+      <p>Un viaje misterioso con personajes fantásticos y coleccionables.</p>
+      <button onclick="location.href='alicia.html'">Descubrir</button>
+    </div>
+
+  </main>
+
+  <!-- Script del menú -->
+  <script>
+    const dropdown = document.querySelector('.dropdown');
+    const dropbtn = document.querySelector('.dropbtn');
+
+    dropbtn.addEventListener('click', () => {
+      dropdown.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

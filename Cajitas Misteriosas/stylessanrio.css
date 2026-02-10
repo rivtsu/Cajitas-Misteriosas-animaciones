@@ -1,0 +1,161 @@
+/* =============================== */
+/*   GALERÍA ESTILO POP MART       */
+/* =============================== */
+
+.galeria-popmart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  animation: fadeGallery 0.8s ease-out;
+}
+
+/* Animación de entrada de la galería */
+@keyframes fadeGallery {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =============================== */
+/*   TARJETA POP MART              */
+/* =============================== */
+
+.card-popmart {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  animation: cardAppear 0.7s cubic-bezier(.25,.46,.45,.94);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animación de entrada individual */
+@keyframes cardAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hover con glow */
+.card-popmart:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(214, 37, 79, 0.4);
+}
+
+/* =============================== */
+/*   EFECTO SHINE (BRILLO)         */
+/* =============================== */
+
+.card-popmart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+}
+
+.card-popmart:hover::after {
+  animation: shine 0.8s ease-in-out;
+}
+
+@keyframes shine {
+  0% {
+    left: -120%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    left: 140%;
+    opacity: 0;
+  }
+}
+
+/* =============================== */
+/*   CONTENEDOR DE IMÁGENES        */
+/* =============================== */
+
+.img-container {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1.2;
+}
+
+/* Imagen principal */
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Zoom suave al hover */
+.card-popmart:hover .img-container img {
+  transform: scale(1.05);
+}
+
+/* Imagen hover */
+.img-hover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 12px;
+}
+
+.card-popmart:hover .img-hover {
+  opacity: 1;
+}
+
+/* =============================== */
+/*   RESPONSIVE                    */
+/* =============================== */
+
+@media (max-width: 900px) {
+  .galeria-popmart {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria-popmart {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .card-popmart {
+    max-width: 350px;
+    margin: auto;
+  }
+}
